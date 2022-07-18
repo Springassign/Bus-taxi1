@@ -1,5 +1,5 @@
 
-public class Bus extends Transportation implements Operatable, BreakTime, PassengerRide, OilWarn, Refuel{
+public class Bus extends Transportation implements Operatable, BreakTime, PassengerRide, OilWarn {
     public Bus(int num, int oil, int speed, int speedVar, int max_passenger) {
         super(num, oil, speed, speedVar, max_passenger);
     }
@@ -61,9 +61,4 @@ public class Bus extends Transportation implements Operatable, BreakTime, Passen
         System.out.println("--------------------");}
     }
 
-
-    @Override
-    public void refuel(int x) {
-
-    }
 }

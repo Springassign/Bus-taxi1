@@ -4,6 +4,7 @@ public class Transportation {
     int speed;
     int speed_Var;
     int max_passenger;
+    String status;
 
 
     public Transportation(int num, int oil, int speed, int speedVar, int max_passenger){

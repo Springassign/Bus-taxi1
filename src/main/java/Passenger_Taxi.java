@@ -1,3 +1,3 @@
 public interface Passenger_Taxi {
-    void refuel(int x);
+    void destination(String destination, int distance);
 }
