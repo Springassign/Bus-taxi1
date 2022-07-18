@@ -9,14 +9,14 @@ public class Main {
         bus.passengerride(45);
         bus.passengerride(5);
         bus.operate(55);
-    Taxi taxi=new Taxi(2);
-    taxi.passengerride(2);
-    taxi.destination("서울역",2);
-    taxi.operate(80);
-    taxi.passengerride(5);
-    taxi.passengerride(3);
-    taxi.destination("구로디지털 단지역", 12);
-    taxi.operate(20);
+        Taxi taxi = new Taxi(2);
+        taxi.passengerride(2);
+        taxi.destination("서울역", 2);
+        taxi.operate(80);
+        taxi.passengerride(5);
+        taxi.passengerride(3);
+        taxi.destination("구로디지털 단지역", 12);
+        taxi.operate(20);
 
     }
 
