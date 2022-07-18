@@ -7,6 +7,8 @@ public class Main {
        bus.operate(50);
        bus.breaktime(10);
        bus.passengerride(45);
+       bus.passengerride(5);
+       bus.operate(55);
 
             }
         };

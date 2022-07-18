@@ -15,22 +15,24 @@ public class Bus extends Transportation implements Operatable, BreakTime, Passen
 
     @Override
     public void passengerride(int x) {
-        if(max_passenger-x<0){}else{
+        if (max_passenger - x < 0) {
+            System.out.println("-*--*--*--*--*--*--*--*--*--*-");
+            System.out.println("alert: 최대 승객수 초과!!");
+            System.out.println("-*--*--*--*--*--*--*--*--*--*-");
+    }else {
         System.out.println("--------------------");
-        System.out.println("탑승 승객 수: "+ x);
-        System.out.println("잔여 승객 수: "+ (max_passenger-x));
-        int payment = x*1000;
-        System.out.println("요금 확인: "+ (payment)+"원");
-        System.out.println("--------------------");}
+        System.out.println("탑승 승객 수: " + x);
+        System.out.println("잔여 승객 수: " + (max_passenger - x));
+        int payment = x * 1000;
+        System.out.println("요금 확인: " + (payment) + "원");
+        System.out.println("--------------------");
     }
+
+}
 
     @Override
     public boolean status(int speedVar) {
-        if (speedVar == 1) {
-            return false;
-        } else {
-            return true;
-        }
+        return speedVar != 1;
     }
 
     @Override
