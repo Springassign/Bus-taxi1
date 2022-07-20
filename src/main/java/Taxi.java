@@ -29,11 +29,6 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
 
     }
 
-    @Override
-    public boolean status(int speedVar) {
-        return speedVar != 1;
-    }
-
 
     @Override
     public void breaktime(int x) {

@@ -41,12 +41,6 @@ public class Bus extends Transportation implements Operatable, BreakTime, Passen
 
     }
 
-
-    @Override
-    public boolean status(int speedVar) {
-        return speedVar != 1;
-    }
-
     @Override
     public void breaktime(int x) {
         oil += x;
