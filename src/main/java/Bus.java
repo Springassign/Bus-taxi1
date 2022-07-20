@@ -5,7 +5,7 @@ public class Bus extends Transportation implements Operatable, BreakTime, Passen
     }
 
     public Bus(int num){
-        this(num,100,0,45);
+        this(num,100,0,30);
         int[] bus_group = new int[num];
         for (int i = 0; i < num; i++) {
             bus_group[i] = (num % 2 == 0) ? 1000 + i : 10 + i;
@@ -16,9 +16,12 @@ public class Bus extends Transportation implements Operatable, BreakTime, Passen
 
     @Override
     public void passengerride(int x) {
-        if (x > 45) {
+        x =0;
+        int people = 0 ;
+        if (x > 30) {
             System.out.println("탑승 승객 수 가 초과 되어 더이상 탑승이 불가능 합니다");
-        } else if( x == 45){
+        } else if( x == 30){
+
             System.out.println("탑승객이 가득 찼습니다.");
             int payment = x * 1000;
             System.out.println("요금 확인: " + (payment) + "원");
