@@ -1,4 +1,4 @@
-public class Taxi extends Transportation implements OilWarn,Operatable,Passenger_Taxi,BreakTime, PassengerRide {
+public class Taxi extends Transportation implements OilWarn,Operatable,Passenger_Taxi,BreakTime, PassengerRide, Speed_Change {
     public Taxi(int num, int oil, int speed, int speedVar, int max_passenger) {
         super(num, oil, speed, speedVar, max_passenger);
     }
@@ -72,6 +72,19 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
         System.out.println("상태: " + status);
         System.out.println("--------------------");
     }
+
+    @Override
+    public void speed_change(int x) {
+        speed_Var=x;
+        speed+=speed_Var;
+        System.out.println("--------------------");
+        System.out.println("속도가 "+x+"만큼 증가하였습니다.");
+        System.out.println("현재속도: "+speed);
+        System.out.println("--------------------");
+    }
+
+
+
 }
 
 

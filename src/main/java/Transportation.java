@@ -4,7 +4,7 @@ public class Transportation {
     int speed;
     int speed_Var;
     int max_passenger;
-    String status;
+    static String status;
 
 
     public Transportation(int num, int oil, int speed, int speedVar, int max_passenger){
@@ -13,6 +13,9 @@ public class Transportation {
         this.speed = speed;
         this.speed_Var =speedVar;
         this.max_passenger = max_passenger;
+    }
+    enum status {
+        RUN, STOP
     }
 
 
