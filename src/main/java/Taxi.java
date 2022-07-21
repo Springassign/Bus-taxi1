@@ -15,7 +15,12 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
 
     @Override
     public void breaktime(int r) {
-
+        if (oil > 10) {
+            System.out.println("운행중");
+        } else if(oil <= 10) {
+            System.out.println("차고지행");
+        }
+        System.out.println("------------------");
     }
 
     @Override
@@ -30,7 +35,7 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
     public void operate(int x) {
         oil = x;
         System.out.println("주유량: " + x );
-
+        System.out.println("-----------------------");
     }
 
     @Override
@@ -43,27 +48,16 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
         } else if (x == 0) {
             System.out.println("");
         }
+        System.out.println("-----------------------");
     }
 
-
-    public void distance(int x) {
-        if (x == 0)
-            System.out.println("");
-        if (x > 0) {
-            int payment = (x * 1000) + 3000;
-            System.out.println("총 요금 " + payment + "원 입니다");
-        }
-    }
 
     @Override
-    public void diatance(int x, String s) {
+    public void destination(String destination, int distance) {
+        System.out.println("목적지: " + destination);
+        System.out.println("목적지까지 거리: " + distance);
+        int payment = 3000+((distance-1) * 1000);
+        System.out.println("요금 확인: " + (payment) + "원");
 
-        System.out.println("목적지는" + s + "입니다");
-        if (x == 0)
-            System.out.println("목적지 까지의 거리를 입력 하세요");
-        if (x > 0) {
-            int payment = (x * 1000) + 3000;
-            System.out.println("총 요금 " + payment + "원 입니다 ");
-        }
     }
 }

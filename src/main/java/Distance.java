@@ -1,4 +1,4 @@
 public interface Distance {
-    void diatance(int x , String s);
+    void destination(String destination, int distance);
 }
 
